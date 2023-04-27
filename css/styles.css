@@ -1,0 +1,156 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --main: #060815;
+    --second: #b7b099;
+    --third: #807654;
+    --light: #cdcbc4;
+    --bg: #545041cc;
+}
+
+/*Box Sizing, para que el padding no sume pixeles sino que use los asignados*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /*1 rem = 10px*/ 
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--main);
+    font-size: 16px;  /*1 rem = 10px*/
+    font-family: 'Playfair Display', serif;
+}
+
+h1 {
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--second);
+    font-weight: 100;
+}
+
+h2 {
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--light);
+    font-weight: 100;
+}
+
+h3 {
+    font-size: 2.2rem;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--third);
+    font-weight: 400;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+/*Aqui el codigo*/
+
+.container {
+    width: 100rem;
+    /* Para margin: Arriba, derecha, abajo e izquierda*/
+    margin: 0 auto;
+}
+
+.bgnavegacion {
+    background-color: var(--light);
+}
+
+.navegacion {
+    display: flex;
+    justify-content: center;
+}
+
+.navegacion h1 {
+    color: var(--main);
+    text-decoration: none;
+    padding: 0.8rem;
+    font-weight: 400;
+}
+
+.parr h3 {
+    font-size: 1.5rem;
+    color: var(--light);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.mainpage {
+    background-image: url(../img/Sabana.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45rem;
+    position: relative;
+}
+
+.mainpagecontent {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .86);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainpagecontent h2 {
+    color: var(--second);
+}
+
+.mainpagecontent p {
+    color: var(--light);
+}
+
+.etapas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 200px;
+    padding-bottom: 8rem;
+}
+
+.etapa {
+    margin: 0 2rem 2rem 2rem;
+}
+
+.etapa p {
+    line-height: 1.2;
+    color: var(--light);
+    text-align: center;
+}
+
+.org {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+      width: 90%;
+    }
+    
+    .mainpage {
+      height: 40rem;
+    }
+    
+    .etapas {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+    }
+    
+    .etapa {
+      margin: 2rem;
+    }
+  }
